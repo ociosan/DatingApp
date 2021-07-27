@@ -18,6 +18,8 @@ namespace API.Helpers
 
             /*FROM THE CLIENT TO DB*/
             CreateMap<MemberUpdateDto, AppUser>();
+
+            CreateMap<RegisterDto, AppUser>();
         }
     }
 }
