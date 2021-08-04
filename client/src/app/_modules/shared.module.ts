@@ -6,6 +6,10 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { FileUploadModule } from 'ng2-file-upload';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimeagoModule } from 'ngx-timeago';
+
 
 /**Every time we install a new package, we must exports and imports the declaration name */
 @NgModule({
@@ -19,7 +23,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     TabsModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
-    BsDatepickerModule.forRoot(),
+    BsDatepickerModule.forRoot(), /** FOR EVERY ANGULAR BOOTSTRAP COMPONENTS, WE ALWAYS NEED FORROOT */
+    PaginationModule.forRoot(),
+    ButtonsModule.forRoot(),
+    TimeagoModule.forRoot()
   ],
   exports: [
     BsDropdownModule,
@@ -27,7 +34,10 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
     TabsModule,
     NgxGalleryModule,
     FileUploadModule,
-    BsDatepickerModule
+    BsDatepickerModule,
+    PaginationModule,
+    ButtonsModule,
+    TimeagoModule
   ]
 })
 export class SharedModule { }
