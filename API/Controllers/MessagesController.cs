@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace API.Controllers
 {
     [Authorize]
+    
     public class MessagesController : BaseApiController
     {
         private readonly IMapper _mapper;
